@@ -130,6 +130,12 @@ class SettingsPicker extends Component {
     });
   }
 
+  openModal = () => {
+    this.setState({
+      pickerOpen: true,
+    });
+  };
+
   closeModal = () => {
     this.setState({
       pickerOpen: false,
@@ -189,12 +195,7 @@ class SettingsPicker extends Component {
     return (
       <View style={{ width: '100%' }}>
         {(!disabled) ? (
-          <TouchableOpacity onPress={() => {
-            this.setState({
-              pickerOpen: true,
-            });
-          }}
-          >
+          <TouchableOpacity onPress={this.openModal}>
             <PickerModal
               closeModal={this.closeModal}
               pickerOpen={pickerOpen}
