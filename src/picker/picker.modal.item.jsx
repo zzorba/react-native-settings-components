@@ -47,7 +47,7 @@ class PickerModalItem extends Component {
     label: PropTypes.string.isRequired,
     isLast: PropTypes.bool,
     itemColor: PropTypes.string,
-    itemText: PropTyps.object,
+    itemText: PropTypes.object,
   };
 
   static defaultProps = {

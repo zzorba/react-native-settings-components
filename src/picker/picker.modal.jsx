@@ -89,7 +89,7 @@ class PickerModal extends Component {
         scrollView: PropTypes.object,
         innerWrapper: PropTypes.object,
         itemColor: PropTypes.string,
-        itemText: PropTyps.object,
+        itemText: PropTypes.object,
       }),
     }),
     renderCloseBtn: PropTypes.func,
