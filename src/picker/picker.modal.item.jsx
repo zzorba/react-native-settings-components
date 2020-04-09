@@ -47,6 +47,7 @@ class PickerModalItem extends Component {
     label: PropTypes.string.isRequired,
     isLast: PropTypes.bool,
     itemColor: PropTypes.string,
+    itemText: PropTyps.object,
   };
 
   static defaultProps = {
@@ -55,7 +56,7 @@ class PickerModalItem extends Component {
 
   render() {
     const {
-      onSelect, selected, label, isLast, itemColor,
+      onSelect, selected, label, isLast, itemColor, itemText,
     } = this.props;
     return (
       <React.Fragment>
@@ -68,7 +69,7 @@ class PickerModalItem extends Component {
               <View style={[style.indicator, { borderColor: itemColor || 'red', backgroundColor: selected ? (itemColor || 'red') : null }]} />
             </View>
             <View style={style.labelWrapper}>
-              <Text style={style.label}>
+              <Text style={[style.label, itemText || {}]}>
                 {label}
               </Text>
             </View>

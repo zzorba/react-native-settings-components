@@ -89,6 +89,7 @@ class PickerModal extends Component {
         scrollView: PropTypes.object,
         innerWrapper: PropTypes.object,
         itemColor: PropTypes.string,
+        itemText: PropTyps.object,
       }),
     }),
     renderCloseBtn: PropTypes.func,
@@ -140,6 +141,7 @@ class PickerModal extends Component {
         value={item.value}
         isLast={index === options.length - 1}
         itemColor={get(modalStyle, 'list.itemColor')}
+        itemText={get(modalStyle, 'list.itemText')}
       />
     );
   };
