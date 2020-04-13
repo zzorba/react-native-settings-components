@@ -81,6 +81,7 @@ class SettingsPicker extends Component {
     renderCloseBtn: PropTypes.func,
     renderListItem: PropTypes.func,
     singleRadio: PropTypes.bool,
+    widgetStyle: PropTypes.object,
     widget: PropTypes.object,
  };
 
@@ -190,7 +191,7 @@ class SettingsPicker extends Component {
       valueProps, valueStyle, disabledOverlayStyle, modalStyle,
       options,
       multi, renderCloseBtn, renderListItem,
-      widget,
+      widget, widgetStyle,
     } = this.props;
     const { pickerOpen, pickerValue } = this.state;
 
@@ -218,7 +219,7 @@ class SettingsPicker extends Component {
               <Text {...valueProps} style={[style.defaultValueStyle, valueStyle]}>
                 {this.generateValStr()}
               </Text>
-              { widget && <View style={valueStyle}>{widget}</View> }
+              { widget && <View style={widgetStyle}>{widget}</View> }
             </View>
           </TouchableOpacity>
         ) : (
