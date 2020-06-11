@@ -141,6 +141,7 @@ class PickerModal extends Component {
         value={item.value}
         isLast={index === options.length - 1}
         itemColor={get(modalStyle, 'list.itemColor')}
+        itemWrapperStyle={get(modalStyle, 'list.itemWrapper')}
         itemText={get(modalStyle, 'list.itemText')}
       />
     );
