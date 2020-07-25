@@ -56,7 +56,7 @@ class PickerModalItem extends Component {
 
   render() {
     const {
-      onSelect, selected, label, isLast, itemColor, itemText,
+      onSelect, selected, label, isLast, itemColor, itemWrapperStyle, itemText,
     } = this.props;
     return (
       <React.Fragment>
@@ -64,7 +64,7 @@ class PickerModalItem extends Component {
           activeOpacity={0.6}
           onPress={onSelect}
         >
-          <View style={style.itemWrapper}>
+          <View style={[style.itemWrapper, itemWrapperStyle]}>
             <View style={style.indicatorWrapper}>
               <View style={[style.indicator, { borderColor: itemColor || 'red', backgroundColor: selected ? (itemColor || 'red') : null }]} />
             </View>
